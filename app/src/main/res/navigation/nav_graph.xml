@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.td1.FirstFragment"
+        android:name="com.example.td1.presentation.list.VagueListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_vague_first">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
