@@ -1,21 +1,25 @@
 package com.example.td1.presentation.list
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.td1.R
 import com.example.td1.presentation.list.api.GhibliApi
+import com.example.td1.presentation.list.GhibliApplication
+import okhttp3.Cache
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -45,9 +49,18 @@ class GhibliListFragment : Fragment() {
 
 
 
+
+        //Partie cache////////////////////////////////////////////////////////////////////////////////
+        var cache: Cache = Cache(File(GhibliApplication.context?.cacheDir, "responses"), 10 * 1024 * 1024)// 10 MiB
+
+        val okhttpClient: OkHttpClient = OkHttpClient().newBuilder()
+                .cache(cache)
+                .build()
+        // /////////////////////////////////////////////////////////////////////////////////////
          val retrofit =  Retrofit.Builder()
                 .baseUrl("https://ghibliapi.herokuapp.com/")
                  .addConverterFactory(GsonConverterFactory.create())
+                 .client(okhttpClient)
                 .build();
 
         val ghibliApi: GhibliApi = retrofit.create(GhibliApi::class.java)
@@ -74,16 +87,7 @@ class GhibliListFragment : Fragment() {
 
 
 
-   /* val ghibliList : ArrayList<Ghibli> = arrayListOf<Ghibli>().apply {
 
-        add(Ghibli("Magicine Sombre"))
-        add(Ghibli("Bellara"))
-        add(Ghibli("Mavrik"))
-        add(Ghibli("Jaws"))
-        add(Ghibli("Pipeline"))
-        add(Ghibli("Teahupoo"))
-
-    }*/
 
    // adapter.updateList(ghibliList)
     }
