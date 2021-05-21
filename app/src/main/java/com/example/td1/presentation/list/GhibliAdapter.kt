@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.td1.R
 
-class VagueAdapter(private var dataSet: List<Vague>) :
-        RecyclerView.Adapter<VagueAdapter.ViewHolder>() {
+class GhibliAdapter(private var dataSet: List<Ghibli>,var listener:((Ghibli) -> Unit)?= null) :
+        RecyclerView.Adapter<GhibliAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
@@ -19,11 +19,11 @@ class VagueAdapter(private var dataSet: List<Vague>) :
 
         init {
             // Define click listener for the ViewHolder's View.
-            textView = view.findViewById(R.id.vague_name)
+            textView = view.findViewById(R.id.ghibli_name)
         }
     }
 
-    fun updateList(list: List<Vague>){
+    fun updateList(list: List<Ghibli>){
         dataSet = list
         notifyDataSetChanged()
 
@@ -33,7 +33,7 @@ class VagueAdapter(private var dataSet: List<Vague>) :
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.vague_item, viewGroup, false)
+                .inflate(R.layout.ghibli_item, viewGroup, false)
 
         return ViewHolder(view)
     }
@@ -43,8 +43,14 @@ class VagueAdapter(private var dataSet: List<Vague>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        val vague : Vague = dataSet[position]
-        viewHolder.textView.text = vague.name
+       // val ghibli : Ghibli = dataSet[position]
+        val ghibli  = dataSet[position]
+       // viewHolder.textView.text = ghibli.toString()
+        viewHolder.textView.text = ghibli.title
+        viewHolder.itemView.setOnClickListener{
+            listener?.invoke(ghibli)
+        }
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
