@@ -17,9 +17,13 @@
     </fragment>
     <fragment
         android:id="@+id/GhibliDetailFragment"
-        android:name="com.example.td1.SecondFragment"
+        android:name="com.example.td1.presentation.list.detail.GhibliDetailFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_ghibli_detail">
+        <argument
+            android:name="ghibliId"
+            app:argType="integer"
+            android:defaultValue="-1" />
 
         <action
             android:id="@+id/navigateToGhibliListFragment"

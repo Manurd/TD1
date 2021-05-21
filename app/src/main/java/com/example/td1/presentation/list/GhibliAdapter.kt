@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.td1.R
 
-class GhibliAdapter(private var dataSet: List<Ghibli>,var listener:((Ghibli) -> Unit)?= null) :
+class GhibliAdapter(private var dataSet: List<Ghibli>,var listener:((Int) -> Unit)?= null) :
         RecyclerView.Adapter<GhibliAdapter.ViewHolder>() {
 
     /**
@@ -47,8 +47,10 @@ class GhibliAdapter(private var dataSet: List<Ghibli>,var listener:((Ghibli) -> 
         val ghibli  = dataSet[position]
        // viewHolder.textView.text = ghibli.toString()
         viewHolder.textView.text = ghibli.title
+
+      //  viewHolder.textViewName.text = ghibli.original_title
         viewHolder.itemView.setOnClickListener{
-            listener?.invoke(ghibli)
+            listener?.invoke(position)
         }
 
     }

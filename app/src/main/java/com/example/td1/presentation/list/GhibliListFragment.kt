@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class GhibliListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private val adapter = GhibliAdapter(listOf(), ::onClickedPokemon)
+    private val adapter = GhibliAdapter(listOf(), ::onClickedGhibli)
 
 
 
@@ -87,7 +88,9 @@ class GhibliListFragment : Fragment() {
    // adapter.updateList(ghibliList)
     }
 
-    private fun onClickedPokemon(ghibli: Ghibli) {
-        findNavController().navigate(R.id.navigateToGhibliDetailFragment)
+    private fun onClickedGhibli(id: Int) {
+        findNavController().navigate(R.id.navigateToGhibliDetailFragment, bundleOf(
+                "ghibliId" to id
+        ))
     }
 }
