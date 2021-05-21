@@ -42,6 +42,11 @@ class GhibliDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         textViewName = view.findViewById(R.id.ghibli_detail_name)
+       /* textViewName1 = view.findViewById(R.id.ghibli_detail_name1)
+        textViewName2 = view.findViewById(R.id.ghibli_detail_name2)
+        textViewName3 = view.findViewById(R.id.ghibli_detail_name3)
+        textViewName4 = view.findViewById(R.id.ghibli_detail_name4)
+        textViewName5 = view.findViewById(R.id.ghibli_detail_name5)*/
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
             findNavController().navigate(R.id.navigateToGhibliListFragment)
@@ -64,7 +69,13 @@ class GhibliDetailFragment : Fragment() {
                     //val ghiblipresponse :  List<Ghibli> = response.body()!!
                    // adapter.updateList(ghiblipresponse)
 
-                    textViewName.text = response.body()!![id].title
+                    textViewName.text = response.body()!![id].title//toString()//title
+                   /* textViewName1.text = response.body()!![id].original_title
+                    textViewName2.text = response.body()!![id].description
+                    textViewName3.text = response.body()!![id].director
+                    textViewName4.text = response.body()!![id].producer
+                    textViewName5.text = response.body()!![id].release_date*/
+
                    // val ghibli  = dataSet[position]
                    // viewHolder.textView.text = ghibli.original_title
                 }

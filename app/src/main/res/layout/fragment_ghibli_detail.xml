@@ -8,6 +8,8 @@
 
     >
 
+
+
     <TextView
         android:id="@+id/ghibli_detail_name"
         android:layout_width="wrap_content"
