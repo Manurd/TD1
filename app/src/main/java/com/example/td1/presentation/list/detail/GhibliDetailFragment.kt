@@ -69,7 +69,7 @@ class GhibliDetailFragment : Fragment() {
                     //val ghiblipresponse :  List<Ghibli> = response.body()!!
                    // adapter.updateList(ghiblipresponse)
 
-                    textViewName.text = response.body()!![id].title//toString()//title
+                    textViewName.text = response.body()!![id].original_title//toString()//title
                    /* textViewName1.text = response.body()!![id].original_title
                     textViewName2.text = response.body()!![id].description
                     textViewName3.text = response.body()!![id].director
