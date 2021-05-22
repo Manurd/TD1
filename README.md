@@ -4,7 +4,8 @@ Ce application affiche laliste des films du studio Ghibli. Elle utilise l'API ..
 de plus son logo d'aplicationest Totoro.
 
 
-Screen La recyclerview:
+Screen de la recyclerview:
+https://github.com/Manurd/TD1/blob/master/screenshot/188433496_529938484837994_1008533812855889320_n.jpg
 
 Detail de l'information:
 
