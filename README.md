@@ -15,3 +15,4 @@ https://github.com/Manurd/TD1/blob/master/screenshot/Cache.JPG
 
 De plus j'ai esseile de faire un Splache sreen mais une erreur sur la recycleview aparait j'ai donc suprimer cette partie pour que l'application marche.
 Mais voisi les screen du travail effectuer:
+https://github.com/Manurd/TD1/blob/master/screenshot/mobil.JPG
