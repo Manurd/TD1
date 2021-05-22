@@ -1,7 +1,7 @@
 # TD1
 
-Ce application affiche laliste des films du studio Ghibli. Elle utilise l'API ...
-de plus son logo d'aplicationest Totoro.
+Ce application affiche la liste des films du studio Ghibli. Elle utilise l'API https://ghibliapi.herokuapp.com
+et une recyclerview pour les film. De plus son logo d'aplicationest Totoro.
 
 
 Screen de la recyclerview:
