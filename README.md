@@ -10,6 +10,8 @@ Detail de l'information:
 
 Logo de l'application:
 
+https://github.com/Manurd/TD1/blob/master/screenshot/189527751_386372812676390_4047730600082010267_n.jpg
+
 J'ai rajouter le cache mais lAPI de le gère pas du coup ca ne marche pas :
 https://github.com/Manurd/TD1/blob/master/screenshot/Cache.JPG
 
