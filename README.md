@@ -8,6 +8,8 @@ Screen La recyclerview:
 
 Detail de l'information:
 
+https://github.com/Manurd/TD1/blob/master/screenshot/189112700_2911467419133904_3461694865422498807_n.jpg
+
 Logo de l'application:
 
 https://github.com/Manurd/TD1/blob/master/screenshot/189527751_386372812676390_4047730600082010267_n.jpg
