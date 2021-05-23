@@ -1,7 +1,7 @@
 # TD1
 
-Ce application affiche la liste des films du studio Ghibli. Elle utilise l'API https://ghibliapi.herokuapp.com
-et une recyclerview pour les film. De plus son logo d'aplicationest Totoro.
+Cette application affiche la liste des films du studio Ghibli. Elle utilise l'API https://ghibliapi.herokuapp.com
+et une recyclerview pour les films. De plus son logo d'application est Totoro.
 
 
 Screen de la recyclerview:
@@ -15,12 +15,12 @@ Logo de l'application:
 
 https://github.com/Manurd/TD1/blob/master/screenshot/189527751_386372812676390_4047730600082010267_n.jpg
 
-J'ai rajouter le cache mais lAPI de le gère pas du coup ca ne marche pas :
+J'ai rajouté le cache mais lAPI ne le gère pas du coup ca ne marche pas :
 https://github.com/Manurd/TD1/blob/master/screenshot/Cache.JPG
 
-De plus j'ai esseile de faire un Splache sreen mais une erreur sur la recycleview aparait j'ai donc suprimer cette partie pour que l'application marche.
-Mais voisi les screen du travail effectuer:
+De plus j'ai essayé de faire un Splachsreen mais une erreur sur la recycleview apparait j'ai donc supprimé cette partie pour que l'application marche.
+Mais voici les screen du travail effectué:
 https://github.com/Manurd/TD1/blob/master/screenshot/mobil.JPG
 
-Ps: c'est normale que SplachScreenActivity soit rouge je venais de le suprimer
+Ps: c'est normal que SplachScreenActivity soit rouge je venais de le supprimer
 https://github.com/Manurd/TD1/blob/master/screenshot/mobil1.JPG
